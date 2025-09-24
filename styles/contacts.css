@@ -1,3 +1,11 @@
+contacts.css:
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-header .contactus {
   display: flex;
   justify-content: center;
@@ -63,6 +71,6 @@
   }
 
   .contacts {
-    margin: 3rem
+    margin: 2rem auto;
   }
 }
