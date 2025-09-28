@@ -1,36 +1,27 @@
-contacts.css:
-.section-header {
+/* === Contact + Gallery контейнері === */
+.contact-gallery {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-header .contactus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
+  gap: 2rem;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  gap: 2rem;
+}
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-left h2 {
+  margin-bottom: 1rem;
+  color: #0077ff;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  text-align: center;
+  margin: 1rem 0;
 }
 
 .contact-form {
@@ -64,13 +55,26 @@ contacts.css:
   background: #005ecc;
 }
 
+.gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
 
-@media (width >= 413px) {
-  .section-header {
-    padding-inline: 4rem;
-  }
+.gallery img {
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
 
-  .contacts {
-    margin: 2rem auto;
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 900px) {
+  .contact-gallery {
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
